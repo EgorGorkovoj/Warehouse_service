@@ -65,7 +65,7 @@ class Customer(AbstractUser):
     )
     apartment = models.CharField(
         verbose_name='Квартира',
-        max_length=10,
+        max_length=LengthConstantsModels.APARTMENT_LENGTH,
         blank=True,
         null=True
     )

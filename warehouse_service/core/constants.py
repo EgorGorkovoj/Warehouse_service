@@ -13,6 +13,8 @@ class LengthConstantsModels:
       улицы организации.
     - BUILDING_LENGTH (int): Максимальная длина символов номера
       здания организации.
+    - APARTMENT_LENGTH (int): Максимальная длина символов поля
+      квартиры модели пользователя.
     - CATEGORY_NAME_LENGTH (int): Максимальная длина символов
       названия категории.
     - PRODUCT_NAME_LENGTH (int): Максимальная длина символов поля
@@ -28,6 +30,7 @@ class LengthConstantsModels:
     CITY_LENGTH: int = 100
     STREET_LENGTH: int = 150
     BUILDING_LENGTH: int = 20
+    APARTMENT_LENGTH: int = 10
     CATEGORY_NAME_LENGTH: int = 255
     PRODUCT_NAME_LENGTH: int = 255
     MIDDLE_NAME_LENGTH: int = 50
