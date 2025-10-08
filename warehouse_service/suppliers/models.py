@@ -1,14 +1,16 @@
 from django.db import models
 
 from core.constants import LengthConstantsModels
+from core.models import BaseModel
 
 
-class Supplier(models.Model):
+class Supplier(BaseModel):
     """
     Модель поставщика.
 
     Назначение:
-        Хранит информацию о поставщике, включая его организацию, местоположение и адрес.
+        Хранит информацию о поставщике, включая его организацию,
+        местоположение и адрес.
 
     Поля:
         name_organization: Наименование организации.
@@ -16,6 +18,10 @@ class Supplier(models.Model):
         city: Город поставщика.
         street: Улица поставщика.
         building: Номер здания.
+
+    Наследуемые поля от абстрактной модели BaseModel:
+        created_at: Дата создания.
+        updated_at: Дата изменения.
     """
 
     name_organization = models.CharField(

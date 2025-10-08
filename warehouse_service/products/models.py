@@ -3,6 +3,7 @@ from django.db import models
 from core.constants import (DefaultValueConstants,
                             LengthConstantsModels,
                             PriceConstants)
+from core.models import BaseModel
 from suppliers.models import Supplier
 
 
@@ -40,7 +41,7 @@ class Category(models.Model):
         return self.name
 
 
-class Product(models.Model):
+class Product(BaseModel):
     """
     Модель товара.
 
@@ -53,6 +54,10 @@ class Product(models.Model):
         supplier: Поставщик, у которого закупается товар.
         category: Категория, к которой относится товар.
         price_per_unit: Цена за единицу товара.
+
+    Наследуемые поля от абстрактной модели BaseModel:
+        created_at: Дата создания.
+        updated_at: Дата изменения.
     """
 
     name = models.CharField(
